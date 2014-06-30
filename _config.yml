@@ -3,7 +3,6 @@ description: "Custom Jewelry"
 pygments: true
 permalink: pretty
 markdown: redcarpet
-#baseurl: /
 github:
   # enables "edit" link
   repo: 'rhyansdesignstudio/rhyansdesignstudio.github.io'

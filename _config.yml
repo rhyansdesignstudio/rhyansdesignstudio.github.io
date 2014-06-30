@@ -4,7 +4,7 @@ signature: "Yours truly, Grizzly Bear"
 pygments: true
 permalink: pretty
 markdown: redcarpet
-baseurl: /starter/
+baseurl: /starter
 github:
   # enables "edit" link
   repo: 'kylekinnaman/starter'

@@ -13,7 +13,7 @@ prose:
 #  rooturl: '_posts'
   siteurl: 'http://kylekinnaman.github.io/starter/'
   relativeLinks: 'http:/kylekinnaman.github.io/starter/links.jsonp'
-  media: '/starter/images'
+  media: 'starter/images'
   metadata:
     _posts:
       - name: "category"

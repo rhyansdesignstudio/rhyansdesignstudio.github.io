@@ -1,6 +1,6 @@
 name: "Rhyans Design Studio"
 description: "Custom Jewelry"
-pygments: true
+highlighter: true
 permalink: pretty
 markdown: redcarpet
 baseurl: 

@@ -9,4 +9,4 @@ Just what it sounds like.
 
 ![](/images/320x50.png)
 
-![](/images/nuke.jpg)
+![murcielago.jpg](/images/murcielago.jpg)

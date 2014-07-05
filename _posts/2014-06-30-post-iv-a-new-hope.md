@@ -10,3 +10,5 @@ title: Post IV; A New Hope
 Seriously, though. Even after they were made... just terrible...
 
 ![Boom!](/images/v.nuke.jpg =200)
+
+![Mah cahr](http://i.imgur.com/Nnq54qc.jpg = 200)

@@ -9,4 +9,4 @@ title: Post IV; A New Hope
 
 Seriously, though. Even after they were made... just terrible...
 
-![JJ Abrams would be so proud](http://lh4.googleusercontent.com/3RKg5mptqsniG8lCBv70np__SJFrZfPMUoN_Ze6w9qDU=w550-h412-p-no =400x)
+![JJ Abrams would be so proud](http://lh4.googleusercontent.com/3RKg5mptqsniG8lCBv70np__SJFrZfPMUoN_Ze6w9qDU=w550-h412-p-no)

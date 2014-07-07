@@ -57,11 +57,12 @@ input,select{vertical-align:middle}
 
       #homeBtn{
         height: 4em;
-        width: 15em;
+        width: 100%;
         display: block;
         background-image: url(../images/logo.png);
-        background-size: 75% auto;
+        background-size: 55% auto;
         background-repeat: no-repeat;
+        background-position: center;
       }
 
       #menuBtn {
@@ -127,7 +128,7 @@ input,select{vertical-align:middle}
 
     .top_nav {
       font-size: 1.25em;
-      margin: .25em 0 .75em;
+      margin: .25em 1.5em .75em;
     }
 
     #homeBtn{

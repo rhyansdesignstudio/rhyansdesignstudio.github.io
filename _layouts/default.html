@@ -2,22 +2,6 @@
 title: Rhyans Design Studio
 published: true
 ---
-<!-- 
-  <div class='container'>
-    <div class='col12 clearfix'>
-      <div class='header col6 margin3 pad4h'>
-        <div class='clearfix col12'>
-          <div class='menu fr'>
-          </div>
-          <h1 class='title'><a href='{{site.baseurl}}/'>{{page.title}}</a></h1>
-        </div>
-      </div>
-    </div>
-    {{content}}
-  </div>
-  <script src='{{site.baseurl}}/site.js'></script>
- -->
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -43,12 +27,9 @@ published: true
 
       </section>
     </header>
-    {{content}}
-        <!--
-          [if IE 7]>
-            <link rel="stylesheet" href="styles/icons-ie7.css">
-          <![endif]
-        -->
+    <section class="main">
+      {{content}}
+    </section>
     <footer>
       <section class="footer_section">
         <div class="footer_left float_left">
@@ -88,7 +69,9 @@ published: true
         var fsScript = document.createElement('script');
         fsScript.src = '{{site.baseurl}}/js/fastclick.js';
         document.body.appendChild(fsScript);
-        FastClick.attach(document.body);
+        fsScript.onLoad(function() {
+          FastClick.attach(document.body);
+        });
       }, false);
     </script>
   </body>

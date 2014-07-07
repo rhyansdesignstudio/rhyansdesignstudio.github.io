@@ -76,6 +76,8 @@ input,select{vertical-align:middle}
       margin: 2em auto;
     }
 
+    
+
     h1 {
       font-size: 1.25em;
       text-align: center;
@@ -243,7 +245,7 @@ footer {
   }
 
 @media only screen and (min-width:400px) {
-  body {
+/*  body {
     margin: 0 auto 6em;
   }
 
@@ -261,10 +263,10 @@ footer {
     width: 22.85em;
     padding: 1em 0 0;
   }
-}
+*/}
 
 @media only screen and (min-width:721px) {
-  #menuBtn:before {
+/*  #menuBtn:before {
       opacity: 0;
   }
   
@@ -296,10 +298,10 @@ footer {
     width: 22.85em;
     padding: 1em 0 0;
   }
-}
+*/}
 
 @media only screen and (min-width:1001px) {
-  body {
+/*  body {
     margin: 0 auto 6em;
   }
 
@@ -307,61 +309,5 @@ footer {
     width: 22.85em;
     padding: 1em 0 0;
   }
-}
+*/}
 
-/* animations */
-#menuBtn:before, #services_mobile_nav, .aboutBtn, .servicesBtn {
-  -webkit-transition: opacity .5s ease-in-out;
-}
-
-[ui-view="main"].ng-enter, [ui-view="main"].ng-leave, [ui-view="services"].ng-enter, [ui-view="services"].ng-leave, [ui-view="menu"].ng-enter, [ui-view="menu"].ng-leave {
-  position: absolute;
-  left: 0;
-  right: 0;
-  -webkit-transition:all .5s ease-in-out;
-    -moz-transition:all .5s ease-in-out;
-    -o-transition:all .5s ease-in-out;
-    transition:all .5s ease-in-out;
-}
-
-[ui-view="main"].ng-enter, [ui-view="services"].ng-enter, [ui-view="menu"].ng-enter {
-  opacity: 0;
-  -webkit-transform:translateY(500px);
-  -moz-transform:translateY(500px);
-  transform:translateY(500px);
-}
-
-[ui-view="main"].ng-enter-active, [ui-view="services"].ng-enter-active, [ui-view="menu"].ng-enter-active {
-  opacity: 1;
-  -webkit-transform:translateY(0);
-  -moz-transform:translateY(0);
-  transform:translateY(0);
-}
-
-[ui-view="main"].ng-leave, [ui-view="services"].ng-leave, [ui-view="menu"].ng-leave {
-  opacity: 1; 
-  -webkit-transform:translateY(0);
-  -moz-transform:translateY(0);
-  transform:translateY(0);
-}
-
-[ui-view="services"].ng-enter-active {
-  opacity: 1;
-  -webkit-transform:translateY(1.25em);
-  -moz-transform:translateY(1.25em);
-  transform:translateY(1.25em);
-}
-
-[ui-view="services"].ng-leave {
-  opacity: 1; 
-  -webkit-transform:translateY(1.25em);
-  -moz-transform:translateY(1.25em);
-  transform:translateY(1.25em);
-}
-
-[ui-view="main"].ng-leave-active, [ui-view="services"].ng-leave-active, [ui-view="menu"].ng-leave-active {
-  opacity: 0;
-  -webkit-transform:translateY(500px);
-  -moz-transform:translateY(500px);
-  transform:translateY(500px);
-}

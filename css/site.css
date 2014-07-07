@@ -45,7 +45,7 @@
     }
 
     header {
-      padding: 1.5em 1em 0em;
+      padding: 1.5em 1em 1em;
       overflow: auto;
       border-bottom: .125em solid #2D3037;
     }
@@ -261,6 +261,10 @@ footer {
 }
 
 @media only screen and (min-width:721px) {
+  header {
+    padding: 1.5em 1em 0em;
+  }
+
   #menuBtn:before {
       opacity: 0;
   }

@@ -127,14 +127,7 @@ input,select{vertical-align:middle}
 
     .top_nav {
       font-size: 1.25em;
-    }
-
-    .top_nav_left {
-      margin: .25em 0 .75em 1em;
-    }
-
-    .top_nav_right {
-      margin: .25em 1em .75em 0;
+      margin: .25em 0 .75em;
     }
 
     #homeBtn{

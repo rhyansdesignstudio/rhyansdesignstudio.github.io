@@ -109,6 +109,14 @@
       border-top: .125em solid #2D3037;
     }
 
+    footer {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 100px;
+      width: 100%;
+          }
+
     .footer_section {
       width: 21em;
       margin: 0 auto;

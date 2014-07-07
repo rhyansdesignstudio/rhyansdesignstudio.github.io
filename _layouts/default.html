@@ -8,9 +8,6 @@ published: true
       <div class='header col6 margin3 pad4h'>
         <div class='clearfix col12'>
           <div class='menu fr'>
-            <a class='{% if page.section == "blog" %}active{% endif %}' href='{{site.baseurl}}/'>Blog</a>
-            <a class='{% if page.url == "about/" %}active{% endif %}' href='{{site.baseurl}}/about'>About Us</a>
-            <a class='{% if page.url == "about/" %}active{% endif %}' href='{{site.baseurl}}/services'>Services</a>
           </div>
           <h1 class='title'><a href='{{site.baseurl}}/'>{{page.title}}</a></h1>
         </div>
@@ -33,10 +30,13 @@ published: true
   </head>
   <body ng-app="app">
     <header>
-      <a id="homeBtn" ui-sref="home" class="float_left"></a>
-      <a id="menuBtn" ui-sref="menu" class="icon icon-menu float_right"></a>
-      <a ui-sref="about" class="icon icon-about aboutBtn float_right delayed_display">About Us</a>
-      <a ui-sref="services.index" class="icon icon-services servicesBtn float_right delayed_display">Services</a>
+      <a ui-sref="about" class="">About Us</a>
+      <a ui-sref="services.index" class="">Services</a>
+
+      <a id="homeBtn" class='float_left {% if page.section == "blog" %}active{% endif %}' href='{{site.baseurl}}/'></a>
+      <a id="menuBtn" class="icon icon-menu float_right"></a>
+      <a class='icon icon-about aboutBtn float_right delayed_display {% if page.url == "about/" %}active{% endif %}' href='{{site.baseurl}}/about'>About Us</a>
+      <a class='icon icon-services servicesBtn float_right delayed_display {% if page.url == "about/" %}active{% endif %}' href='{{site.baseurl}}/services'>Services</a>
     </header>
     {{content}}
         <!--

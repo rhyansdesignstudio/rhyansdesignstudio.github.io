@@ -131,10 +131,6 @@ input,select{vertical-align:middle}
       margin: .25em 1.5em .75em;
     }
 
-      .delayed_display {
-        display: none;
-        opacity: 0;
-      }
 }
 
 body {
@@ -236,11 +232,6 @@ footer {
 .redesignBtn {
     margin-bottom: .75em;
 }
-
-  .delayed_display {
-    opacity: 0;
-    border: none;
-  }
 
 @media only screen and (min-width:400px) {
   body {

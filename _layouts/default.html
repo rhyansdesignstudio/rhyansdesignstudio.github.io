@@ -32,9 +32,28 @@ published: true
     <header>
       <section class="header_section">
         <a id="homeBtn" class='float_left {% if page.section == "blog" %}active{% endif %}' href='{{site.baseurl}}/'></a>
-        <a id="menuBtn" class="icon icon-menu float_right"></a>
-        <a class='icon icon-about aboutBtn float_right delayed_display {% if page.url == "about/" %}active{% endif %}' href='{{site.baseurl}}/about'>About Us</a>
-        <a class='icon icon-services servicesBtn float_right delayed_display {% if page.url == "about/" %}active{% endif %}' href='{{site.baseurl}}/services'>Services</a>
+        <!-- <a id="menuBtn" class="icon icon-menu float_right"></a> -->
+<!-- 
+        <nav>
+          <a class='icon icon-about aboutBtn float_right delayed_display {% if page.url == "about/" %}active{% endif %}' href='{{site.baseurl}}/about'>About Us</a>
+          <a class='icon icon-services servicesBtn float_right delayed_display {% if page.url == "about/" %}active{% endif %}' href='{{site.baseurl}}/services'>Services</a>
+        </nav>
+ -->
+      <section class="footer_section">
+        <div class="footer_left float_left">
+          <a href="https://www.google.com/maps/place/Rhyans+Design+Studio/@33.9767389,-84.479676,17z/data=!4m2!3m1!1s0x0:0xeadf077ad3fd7bb7" class="icon float_left">
+            <div class="icon icon-map float_left"></div>
+            1050 East Piedmont<br />Marietta, GA 30062
+          </a>
+        </div>
+        <div class="footer_right float_right">
+          <a href="tel://6785605718" class="icon float_left">
+            <div class="icon icon-phone float_left"></div>
+            (678) 560-5718
+          </a>
+        </div>
+      </section>
+
       </section>
     </header>
     {{content}}

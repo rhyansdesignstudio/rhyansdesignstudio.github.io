@@ -53,6 +53,7 @@
       .header_section {
         width: 21em;
         margin: 0 auto;
+        background: pink;
       }
 
       #homeBtn{

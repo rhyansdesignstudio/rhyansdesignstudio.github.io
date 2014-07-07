@@ -244,6 +244,10 @@ footer {
     margin: 0 auto 6em;
   }
 
+  header {
+    padding: 1.5em 1em 1em;
+  }
+
   h1 {
     margin-bottom: 1em;
   }
@@ -261,10 +265,6 @@ footer {
 }
 
 @media only screen and (min-width:721px) {
-  header {
-    padding: 1.5em 1em 1em;
-  }
-
   #menuBtn:before {
       opacity: 0;
   }

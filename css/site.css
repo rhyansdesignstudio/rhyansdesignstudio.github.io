@@ -50,6 +50,11 @@
       border-bottom: .125em solid #2D3037;
     }
 
+      .header_section {
+        width: 21em;
+        margin: 0 auto;
+      }
+
       #homeBtn{
         height: 4em;
         width: 15em;
@@ -221,6 +226,7 @@ footer {
 }
 
 .servicesBtn {
+  display: ;
   background-color: #383d49;
   border-bottom: .125em solid #2D3037;
 }

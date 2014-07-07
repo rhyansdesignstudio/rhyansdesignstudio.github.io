@@ -1,18 +1,8 @@
 ---
-title: This is my Site Title
+title: Rhyans Design Studio
 published: true
 ---
-
-<!DOCTYPE html>
-<html>
-<head>
-  <title>{% if page.url != '/index.html' %}| {{page.title}}{% endif %}</title>
-  <meta charset='UTF-8'/>
-  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-  <link rel='shortcut icon' href='{{site.baseurl}}/favicon.ico' type='image/x-icon' />
-  <link href='{{site.baseurl}}/site.css' rel='stylesheet' />
-</head>
-<body>
+<!-- 
   <div class='container'>
     <div class='col12 clearfix'>
       <div class='header col6 margin3 pad4h'>
@@ -29,4 +19,62 @@ published: true
     {{content}}
   </div>
   <script src='{{site.baseurl}}/site.js'></script>
-</body>
+ -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset='UTF-8'/>
+    <title>{% if page.url != '/index.html' %}| {{page.title}}{% endif %}</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <link rel='shortcut icon' href='{{site.baseurl}}/favicon.ico' type='image/x-icon' />
+    <link href='{{site.baseurl}}/site.css' rel='stylesheet' />
+  </head>
+  <body ng-app="app">
+    <header>
+      <a id="homeBtn" ui-sref="home" class="float_left"></a>
+      <a id="menuBtn" ui-sref="menu" class="icon icon-menu float_right"></a>
+      <a ui-sref="about" class="icon icon-about aboutBtn float_right delayed_display">About Us</a>
+      <a ui-sref="services.index" class="icon icon-services servicesBtn float_right delayed_display">Services</a>
+    </header>
+    <div id="overlay" ui-view="menu" ng-cloak></div>
+    <div id="main" ui-view="main" ng-cloak></div>
+
+    <link rel="stylesheet" href="styles/rhyans.css" />
+    <link rel="stylesheet" href="styles/icons.css">
+        <!--
+          [if IE 7]>
+            <link rel="stylesheet" href="styles/icons-ie7.css">
+          <![endif]
+        -->
+    <script src='scripts/fastclick.js'></script>
+    <script>
+      delayedDisplay = document.querySelectorAll('.delayed_display');
+      for(var i = 0; i < delayedDisplay.length; ++i) {
+        delayedDisplay[i].style.display = 'inline';
+      }
+      
+      WebFontConfig = {
+        google: {
+          families: ['Lato']
+        }
+      };
+      (function() {
+        var wf = document.createElement('script');
+        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+      })();
+
+      window.addEventListener('load', function() {
+          FastClick.attach(document.body);
+      }, false);
+    </script>
+    <script src="scripts/controllers/postCtrl.js"></script>
+    <script data-require="angular.js@1.2.15" data-semver="1.2.15" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+    <script src="scripts/angular-ui-router.0.2.10.js"></script>
+    <script src="scripts/angular-animate.1.2.8.js"></script>
+    <script src="scripts/app.js"></script>
+  </body>
+</html>

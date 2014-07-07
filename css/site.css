@@ -69,11 +69,6 @@ input,select{vertical-align:middle}
         font-size: 1.25em;
       }
 
-      .top_nav {
-        font-size: 1.25em;
-        margin: .25em 0 .75em;
-      }
-
     section {
       clear: both;
       width: 80%;
@@ -128,6 +123,11 @@ input,select{vertical-align:middle}
 
     .footer_right, .icon-map {
       margin-top: .5em;
+    }
+
+    .top_nav {
+      font-size: 1.25em;
+      margin: .25em 0 .75em;
     }
 
     #homeBtn{

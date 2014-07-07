@@ -131,15 +131,6 @@ input,select{vertical-align:middle}
       margin: .25em 1.5em .75em;
     }
 
-    #homeBtn{
-      height: 4em;
-      width: 15em;
-      background-image: url(../images/logo.png);
-      background-size: 75% auto;
-      background-repeat: no-repeat;
-      margin: 0 auto;
-    }
-
       .delayed_display {
         display: none;
         opacity: 0;

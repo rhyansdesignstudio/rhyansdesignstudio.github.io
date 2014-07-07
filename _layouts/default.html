@@ -33,13 +33,14 @@ published: true
       <section class="header_section">
         <a id="homeBtn" class='float_left {% if page.section == "blog" %}active{% endif %}' href='{{site.baseurl}}/'></a>
         <section class="footer_section">
-          <div class="col6">
+          <div class="footer_left float_left">
             <a class='icon icon-about aboutBtn float_right delayed_display {% if page.url == "about/" %}active{% endif %}' href='{{site.baseurl}}/about'>About Us</a>
           </div>
-          <div class="col6">
+          <div class="footer_right float_right">
             <a class='icon icon-services servicesBtn float_right delayed_display {% if page.url == "about/" %}active{% endif %}' href='{{site.baseurl}}/services'>Services</a>
           </div>
         </section>
+
       </section>
     </header>
     {{content}}

@@ -239,13 +239,15 @@ footer {
     border: none;
   }
 
+@media only screen and (min-width:320px) {
+  header {
+    padding: 1.5em 1em 1em;
+  }
+}
+
 @media only screen and (min-width:400px) {
   body {
     margin: 0 auto 6em;
-  }
-
-  header {
-    padding: 1.5em 1em 1em;
   }
 
   h1 {

@@ -85,9 +85,11 @@ published: true
       })();
 
       window.addEventListener('load', function() {
-          FastClick.attach(document.body);
+        var fsScript = document.createElement('script');
+        fsScript.src = '{{site.baseurl}}/js/fastclick.js';
+        document.body.appendChild(fsScript);
+        FastClick.attach(document.body);
       }, false);
     </script>
-    <script src='{{site.baseurl}}/js/fastclick.js'></script>
   </body>
 </html>

@@ -6,14 +6,13 @@ published: true
 <html>
   <head>
     <meta charset='UTF-8'/>
-    <title>{% if page.url != '/index.html' %}| {{page.title}}{% endif %}</title>
+    <title>{% if page.url != '/index.html' %}{{page.title}}{% endif %}</title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
     <link rel='shortcut icon' href='{{site.baseurl}}/favicon.ico' type='image/x-icon' />
     <link href='{{site.baseurl}}/css/site.css' rel='stylesheet' />
     <link href='{{site.baseurl}}/css/icons.css' rel='stylesheet' />
   </head>
   <body ng-app="app">
-default.html
     <header>
       <section class="header_section">
         <a id="homeBtn" class='float_left' href='{{site.baseurl}}/'></a>
@@ -34,7 +33,7 @@ default.html
     <footer>
       <section class="footer_section">
         <div class="footer_left float_left">
-          <a href="https://www.google.com/maps/place/Rhyans+Design+Studio/@33.9767389,-84.479676,17z/data=!4m2!3m1!1s0x0:0xeadf077ad3fd7bb7" class="icon float_left">
+          <a target="_blank" href="https://www.google.com/maps/place/Rhyans+Design+Studio/@33.9767389,-84.479676,17z/data=!4m2!3m1!1s0x0:0xeadf077ad3fd7bb7" class="icon float_left">
             <div class="icon icon-map float_left"></div>
             1050 East Piedmont<br />Marietta, GA 30062
           </a>

@@ -1,7 +1,7 @@
 name: "Rhyans Design Studio"
 description: "Custom Jewelry"
 highlighter: true
-permalink: pretty
+permalink: none
 markdown: redcarpet
 baseurl: 
 github:

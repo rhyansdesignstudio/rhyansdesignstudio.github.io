@@ -60,11 +60,16 @@ input,select{vertical-align:middle}
         height: 4em;
         width: 100%;
         display: block;
-        background-image: url(../images/logo.png);
-        background-size: 55% auto;
+        /*background-image: url(../images/logo.png);*/
+/*        background-size: 55% auto;
         background-repeat: no-repeat;
         background-position: center;
-      }
+*/      }
+
+    .logo {
+      width: 55%;
+      margin: 0 22.5%;
+    }
 
       #menuBtn {
         margin-top: .875em;

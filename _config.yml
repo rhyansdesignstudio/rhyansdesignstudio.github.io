@@ -9,7 +9,7 @@ github:
   repo: 'rhyansdesignstudio/rhyansdesignstudio.github.io'
   branch: master
 prose:
-  rooturl: '/'
+  # rooturl: ''
   siteurl: 'http://rhyansdesignstudio.github.io/'
   relativeLinks: 'http:/rhyansdesignstudio.github.io/links.jsonp'
   media: 'images'

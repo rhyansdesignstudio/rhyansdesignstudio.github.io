@@ -45,7 +45,7 @@ input,select{vertical-align:middle}
     }
 
     header {
-      padding: 1.5em 1em 0em;
+      padding: 1.5em 0em 0em;
       overflow: auto;
       border-bottom: .125em solid #2D3037;
     }

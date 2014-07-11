@@ -13,7 +13,7 @@ var rhyans = (function() {
     carousel_items[0].parentNode.style.position = 'relative';
 
     var imgHeightOffset = function() {
-        carousel_items[0].parentNode.style.height = carousel_items[0].height + 'px';
+        document.getElementsByClassName('visible')[0].parentNode.style.height = document.getElementsByClassName('visible')[0].height + 'px';
     };
 
     var startCarousel = function() {
@@ -34,6 +34,7 @@ var rhyans = (function() {
             nextVisible = carousel_items.length - 1;
             return nextVisible;
         }
+        imgHeightOffset();
     };
 
     return {

@@ -195,16 +195,16 @@ footer {
 
 }
 
+p, p > img {
+  transition:all 1s ease-in-out;
+}
+
 p > img {
   position: absolute;
   top: 0;
   left: 0;
   background-size: cover;
   display: block;
-}
-
-p > img {
-  transition:all 1s ease-in-out;
   opacity: 0;
 }
 

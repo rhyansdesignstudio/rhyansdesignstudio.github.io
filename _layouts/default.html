@@ -68,12 +68,15 @@ published: true
       })();
 
       window.addEventListener('load', function() {
-        var fsScript = document.createElement('script');
-        fsScript.src = '{{site.baseurl}}/js/fastclick.js';
-        document.body.appendChild(fsScript);
-        fsScript.addEventListener('load', function() {
+        var rhyansScript = document.createElement('script'),
+            fcScript = document.createElement('script');
+        fcScript.src = '{{site.baseurl}}/js/fastclick.js';
+        document.body.appendChild(fcScript);
+        fcScript.addEventListener('load', function() {
           FastClick.attach(document.body);
         });
+        rhyansScript.src = '{{site.baseurl}}/js/rhyans.js';
+        document.body.appendChild(rhyansScript);
       }, false);
     </script>
   </body>

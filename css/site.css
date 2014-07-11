@@ -22,7 +22,7 @@ input,select{vertical-align:middle}
       margin: 0 auto 6em;
       font-family: 'Lato', 'sans-serif';
       color: #fff;
-      overflow-y: scroll;
+      /*overflow-y: scroll;*/
     }
 
     header, footer {
@@ -159,7 +159,6 @@ img {
 
 #overlay_menu {
   border: .125em solid #2D3037;
-  border-radius: .5em;
   padding: 0;
   margin-top: 2em;
 }
@@ -191,7 +190,6 @@ footer {
   padding: .5em 0;
   background-color: #383d49;
   border: .125em solid #2D3037;
-  border-radius: .5em;
 
 }
 
@@ -206,6 +204,7 @@ p > img {
   background-size: cover;
   display: block;
   opacity: 0;
+  border: .25em solid gray;
 }
 
 p > img.visible {

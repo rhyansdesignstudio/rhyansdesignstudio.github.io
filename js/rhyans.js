@@ -14,6 +14,7 @@ var rhyans = (function() {
 
     var imgHeightOffset = function() {
         document.getElementsByClassName('visible')[0].parentNode.style.height = document.getElementsByClassName('visible')[0].height + 'px';
+        document.getElementsByClassName('visible')[0].parentNode.style.left = '-.25em';
     };
 
     var startCarousel = function() {

@@ -1,11 +1,15 @@
 var rhyans = (function() {
+    document.querySelector('a[href="custom"]').id = 'custom';
+    document.querySelector('a[href="repairs"]').id = 'repairs';
+    document.querySelector('a[href="redesign"]').id = 'redesign';
+
     var carousel_items = [],
         currentlyVisible = 0,
         nextVisible = 0,
         runCarousel;
 
-    for (i = 0; i < document.getElementsByTagName('img').length; i++) {
-        carousel_items.push(document.getElementsByTagName('img')[i]);
+    for (i = 0; i < document.querySelectorAll('img').length; i++) {
+        carousel_items.push(document.querySelectorAll('img')[i]);
     }
 
     carousel_items = carousel_items.splice(1, carousel_items.length);
@@ -14,7 +18,7 @@ var rhyans = (function() {
 
     var imgHeightOffset = function() {
         document.getElementsByClassName('visible')[0].parentNode.style.height = document.getElementsByClassName('visible')[0].height + 'px';
-        document.getElementsByClassName('visible')[0].parentNode.style.left = '-.25em';
+        document.getElementsByClassName('visible')[0].parentNode.classList.add('img_float');
     };
 
     var startCarousel = function() {

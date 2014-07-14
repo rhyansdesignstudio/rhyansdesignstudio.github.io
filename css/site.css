@@ -211,7 +211,19 @@ p > img.visible {
   opacity: 1;
 }
 
+  .img_float {
+    left: -.25em;
+  }
+
 @media only screen and (min-width:400px) {
+  .img_float {
+    float: right;
+    left: 0;
+  }
+
+    .img_float > img {
+      height: 10em;
+    }
 }
 
 @media only screen and (min-width:721px) {

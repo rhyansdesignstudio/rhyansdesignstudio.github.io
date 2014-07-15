@@ -24,12 +24,13 @@ input,select{vertical-align:middle}
       color: #fff;
       /*overflow-y: scroll;*/
     }
+  
 
     header, footer {
       background-color: #383d49;
     }
 
-    .footer_section a, .footer_section a:hover, .footer_section a:focus, .footer_section a:active, .footer_section a:visited, .icon {
+    a, a:hover, a:focus, a:active, a:visited, .icon {
       color: #ffcb05;
     }
 
@@ -91,6 +92,11 @@ input,select{vertical-align:middle}
     h2 {
       font-size: 1.25em;
       text-align: center;
+    }
+
+    h3 {
+      color: #ffcb05;
+      font-size: 1.25em;
     }
 
     p {

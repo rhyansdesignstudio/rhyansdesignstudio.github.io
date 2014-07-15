@@ -1,15 +1,17 @@
 var rhyans = (function() {
-    document.querySelector('a[href="custom"]').id = 'custom';
-    document.querySelector('a[href="repairs"]').id = 'repairs';
-    document.querySelector('a[href="redesign"]').id = 'redesign';
+    if (window.location.href.indexOf('services') > -1) {
+        document.querySelector('a[href="custom"]').id = 'custom';
+        document.querySelector('a[href="repairs"]').id = 'repairs';
+        document.querySelector('a[href="redesign"]').id = 'redesign';
+    }
 
     var carousel_items = [],
-        currentlyVisible = 0,
         nextVisible = 0,
         runCarousel;
 
     for (i = 0; i < document.querySelectorAll('img').length; i++) {
         carousel_items.push(document.querySelectorAll('img')[i]);
+        carousel_items[i].parentNode.classList.add(i);
     }
 
     carousel_items = carousel_items.splice(1, carousel_items.length);
@@ -22,9 +24,9 @@ var rhyans = (function() {
     };
 
     var startCarousel = function() {
-        moveCarousel(nextVisible);
+        moveCarousel(0);
         runCarousel = setInterval(function() {
-            moveCarousel(nextVisible);
+            moveCarousel(1);
         }, 2500);
     };
 

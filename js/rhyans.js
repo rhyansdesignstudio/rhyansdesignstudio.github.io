@@ -5,43 +5,44 @@ var rhyans = (function() {
         document.querySelector('a[href="redesign"]').id = 'redesign';
     }
 
-    var carousel_items = [],
-        nextVisible = 0,
-        runCarousel;
-
-    for (i = 0; i < document.querySelectorAll('img').length; i++) {
-        carousel_items.push(document.querySelectorAll('img')[i]);
-        carousel_items[i].parentNode.classList.add(i);
-    }
-
-    carousel_items = carousel_items.splice(1, carousel_items.length);
-    carousel_items[0].classList.add('visible');
-    carousel_items[0].parentNode.style.position = 'relative';
-
     var imgHeightOffset = function() {
-        document.getElementsByClassName('visible')[0].parentNode.style.height = document.getElementsByClassName('visible')[0].height + 'px';
-        document.getElementsByClassName('visible')[0].parentNode.classList.add('img_float');
-    };
-
-    var startCarousel = function() {
-        moveCarousel(0);
-        runCarousel = setInterval(function() {
-            moveCarousel(1);
-        }, 2500);
-    };
-
-    var moveCarousel = function() {
-        document.getElementsByClassName('visible')[0].classList.remove('visible');
-        carousel_items[nextVisible].classList.add('visible');
-        nextVisible++;
-        if (nextVisible === carousel_items.length) {
-            nextVisible = 0;
-            return nextVisible;
-        } else if ((nextVisible - 1) < 0) {
-            nextVisible = carousel_items.length - 1;
-            return nextVisible;
+        for (var i = 0; i < document.getElementsByClassName('visible').length; i++) {
+            document.getElementsByClassName('visible')[i].parentNode.style.height = document.getElementsByClassName('visible')[i].height + 'px';
         }
-        imgHeightOffset();
+    };
+
+
+    var startCarousel = function(carousel_section) {
+        console.log(carousel_section);
+        var carousel_items = [],
+            runCarousel;
+
+        for (i = 0; i < document.querySelectorAll('img[alt="' + carousel_section + '"').length; i++) {
+            carousel_items.push(document.querySelectorAll('img[alt="' + carousel_section + '"')[i]);
+            carousel_items[i].parentNode.id = carousel_section;
+            carousel_items[i].parentNode.style.position = 'relative';
+        }
+
+        document.querySelectorAll('#' + carousel_section + ' img:first-of-type')[0].classList.add('visible');
+        moveCarousel(carousel_section, carousel_items);
+    };
+
+    var moveCarousel = function(carousel_section, carousel_items) {
+        var carousel = carousel_items,
+            currentlyVisible = 0,
+            nextVisible = 1;
+        setInterval(function() {
+            carousel[currentlyVisible].classList.remove('visible');
+            carousel[nextVisible].classList.add('visible');
+            imgHeightOffset();
+
+            currentlyVisible = nextVisible;
+            if (nextVisible === carousel.length - 1) {
+                nextVisible = 0;
+            } else {
+                nextVisible++;
+            }
+        }, 2500);
     };
 
     return {
@@ -50,7 +51,25 @@ var rhyans = (function() {
     };
 }());
 
-rhyans.startCarousel();
+var carousels = [],
+    carousel_classes = [];
+
+carousels.push(document.querySelectorAll('img:not([alt=""]):not([id="logo"])'));
+for (var i = 0; i < carousels[0].length; i++) {
+    carousel_classes.push(carousels[0][i].alt);
+}
+
+var carousel_classes = carousel_classes.reduce(function(a, b) {
+    if (a.indexOf(b) < 0) a.push(b);
+    return a;
+}, []);
+
+
+for (var newCarousel in carousel_classes) {
+    rhyans.startCarousel(carousel_classes[newCarousel]);
+}
+// rhyans.startCarousel('repairs');
+// rhyans.startCarousel('redesign');
 rhyans.imgHeightOffset();
 
 window.onresize = function() {

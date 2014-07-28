@@ -67,7 +67,7 @@ input,select{vertical-align:middle}
         background-position: center;
 */      }
 
-    .logo {
+    #logo {
       width: 55%;
       margin: 0 22.5%;
     }

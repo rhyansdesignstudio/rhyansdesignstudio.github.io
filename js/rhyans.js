@@ -3,6 +3,7 @@ var rhyans = (function() {
         document.querySelector('a[href="custom"]').id = 'custom';
         document.querySelector('a[href="repairs"]').id = 'repairs';
         document.querySelector('a[href="redesign"]').id = 'redesign';
+        document.querySelector('a[href="#custom"]').parentNode.style.textAlign = 'center';
     }
 
     var imgHeightOffset = function() {
@@ -20,6 +21,8 @@ var rhyans = (function() {
         for (i = 0; i < document.querySelectorAll('img[alt="' + carousel_section + '"').length; i++) {
             carousel_items.push(document.querySelectorAll('img[alt="' + carousel_section + '"')[i]);
             carousel_items[i].parentNode.id = carousel_section;
+            carousel_items[i].parentNode.className = '';
+            carousel_items[i].parentNode.classList.add('carousel');
             carousel_items[i].parentNode.style.position = 'relative';
         }
 
@@ -68,8 +71,7 @@ var carousel_classes = carousel_classes.reduce(function(a, b) {
 for (var newCarousel in carousel_classes) {
     rhyans.startCarousel(carousel_classes[newCarousel]);
 }
-// rhyans.startCarousel('repairs');
-// rhyans.startCarousel('redesign');
+
 rhyans.imgHeightOffset();
 
 window.onresize = function() {

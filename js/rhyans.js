@@ -14,7 +14,6 @@ var rhyans = (function() {
 
 
     var startCarousel = function(carousel_section) {
-        console.log(carousel_section);
         var carousel_items = [],
             runCarousel;
 

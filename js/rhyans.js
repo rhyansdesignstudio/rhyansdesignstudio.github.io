@@ -14,12 +14,11 @@ var rhyans = (function() {
 
 
     var startCarousel = function(carousel_section) {
-        console.log(carousel_section);
         var carousel_items = [],
             runCarousel;
 
-        for (i = 0; i < document.querySelectorAll('img[alt="' + carousel_section + '"').length; i++) {
-            carousel_items.push(document.querySelectorAll('img[alt="' + carousel_section + '"')[i]);
+        for (i = 0; i < document.querySelectorAll('img[alt="' + carousel_section + '"]').length; i++) {
+            carousel_items.push(document.querySelectorAll('img[alt="' + carousel_section + '"]')[i]);
             carousel_items[i].parentNode.id = carousel_section;
             carousel_items[i].parentNode.className = '';
             carousel_items[i].parentNode.classList.add('carousel');
